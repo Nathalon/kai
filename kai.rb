@@ -1,4 +1,4 @@
-# Copyright 2023 ShRP <braindisassemblue@gmail.com>
+# Copyright 2023 Elijah Gordon (SLcK) <braindisassemblue@gmail.com>
 
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -36,7 +36,7 @@ class Kai
   puts '                               \/     \/                                '.green
   puts '------------------------------------------------------------------------'.green
 
-  Version = 'Version => Kai v0.1 Copyright 2023 ShRP <braindisassemblue@gmail.cm>'.green
+  Version = 'Version => Kai v0.1 Copyright 2023 SLcK <braindisassemblue@gmail.com>'.green
   
   def parser(arguments)
     ARGV << '-h' if ARGV.empty?
