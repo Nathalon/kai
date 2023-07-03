@@ -36,7 +36,7 @@ class Kai
   puts '                               \/     \/                                '.green
   puts '------------------------------------------------------------------------'.green
 
-  Version = 'Version => Kai v0.1 Copyright 2023 SLcK <braindisassemblue@gmail.com>'.green
+  Version = 'Version => Kai v1.0 Copyright 2023 SLcK <braindisassemblue@gmail.com>'.green
   
   def parser(arguments)
     ARGV << '-h' if ARGV.empty?
