@@ -1,6 +1,6 @@
 ## kai
 
-![Screenshot from 2023-07-17 19-00-16](https://github.com/BrainDisassembly/kai/assets/69394316/77bc285c-0174-4adc-8a8c-82aea0dff4f9)
+![Screenshot from 2023-07-18 09-45-54](https://github.com/Nathalon/kai/assets/69394316/b90c9b27-6d89-4e1b-b261-575a0f04beb3)
 
 ##
 
