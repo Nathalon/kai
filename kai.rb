@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Copyright 2023 Elijah Gordon (SLcK) <braindisassemblue@gmail.com>
 
 # This program is free software; you can redistribute it and/or
