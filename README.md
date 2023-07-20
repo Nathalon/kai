@@ -1,9 +1,5 @@
 ## kai
 
-![Screenshot from 2023-07-18 09-45-54](https://github.com/Nathalon/kai/assets/69394316/b90c9b27-6d89-4e1b-b261-575a0f04beb3)
-
-##
-
 ## Dependencies
 
 **In order for the script to work you need to have Ruby installed on the system.**  
