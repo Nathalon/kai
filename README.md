@@ -8,4 +8,6 @@
 **2. Run Kai. `$ ./kai.rb --remote-host 192.168.1.109 --port-remote 1234`**  
 **3. If you get this message `Status: Connection Established!` it means you gained access.**  
 
-![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white/)
+  <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby"
+      width="50" height="50" /> 
